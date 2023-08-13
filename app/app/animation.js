@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 export function Meteor(){
     return(
         <div>
-            <motion.div animate={{x:100}}>Hello</motion.div>
             <motion.div className='test'
             animate={{x:500}}
             transition={{ duration: 6, repeat: Infinity }}></motion.div>

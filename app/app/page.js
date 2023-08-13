@@ -7,6 +7,7 @@ import {Menu, Footer} from './menu.js'
 import {ParA, ParB} from './text.js'
 import { ImageA } from '/app/images.js'
 import { CardA, CardB, CardC, CardD, CardE } from './cards.js'
+import { Test } from './test.js'
 
 export default function Main() {
   return (
@@ -14,7 +15,7 @@ export default function Main() {
         <Meteor/>
         <Menu/>
         <ParA/>
-        <ImageA/>
+        <Test/>
         <ScrollBar/>
         <ParB/>
         <CardA/>
@@ -23,6 +24,8 @@ export default function Main() {
         <CardD/>
         <CardE/>
         <Footer/>
+
+
     </main>
   )
 }

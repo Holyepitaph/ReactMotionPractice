@@ -8,13 +8,13 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -28,7 +28,4 @@ body {
 
 
 .test{
-  background: linear-gradient(270deg, rgba(38, 38, 38, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
-  width: 100px;
-  height: 2px;
 }
