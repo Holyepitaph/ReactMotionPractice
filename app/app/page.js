@@ -16,7 +16,7 @@ export default function Main() {
         <Meteor/>
         <Menu/>
         <ParA/>
-        <Test/>
+        <ImageA/>
         <ScrollBar/>
         <ParB/>
         <CardA/>

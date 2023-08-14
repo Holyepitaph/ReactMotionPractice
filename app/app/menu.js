@@ -1,15 +1,43 @@
+import React from "react";
+import {motion} from 'framer-motion'
+
 // Animation Needed also is see through and expands most screen on scroll
 export function Menu(){
+  const [isClick, toggleClick] = React.useState(false);
+  const toggleClickMenu = () => {
+    toggleClick(!isClick);
+  };
+  const subMenuAnimate = {
+    enter: {
+      opacity: 1,
+      rotateX: 0,
+      transition: {
+        duration: 1
+      },
+      display: "block"
+    },
+    exit: {
+      opacity: 0,
+      rotateX: -15,
+      transition: {
+        duration: 0.5,
+        delay: 0.3
+      },
+      transitionEnd: {
+        display: "none"
+      }
+    }
+  };
     return(
-        <div>
-            <div className="flex gap-1 rounded bg-white sticky top-0 bg-opacity-60 m-4 pl-4 pt-2 font-bold justify-start">
+        <div className="rounded bg-white sticky top-4 bg-opacity-60 m-4 pl-4 pt-2 font-bold">
+            <div className="flex gap-1  justify-start">
                 <div>S</div>
                 <div>Extend</div>
                 <div className="ml-auto pr-4">
-                  <div>
-                    <button className="relative group">
-                      <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
-                        <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                  <div className="-mt-2 pb-2">
+                    <button className="relative group" onClick={toggleClickMenu}>
+                      <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[25px] h-[25px] transform transition-all bg-slate-700 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
+                        <div className="flex flex-col justify-between w-[10px] h-[10px] transform transition-all duration-300 origin-center overflow-hidden">
                           <div className="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:rotate-[42deg]"></div>
                           <div className="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-translate-x-10"></div>
                           <div className="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left group-focus:-rotate-[42deg]"></div>
@@ -19,11 +47,14 @@ export function Menu(){
                   </div>
                 </div>
             </div>
-            <div>
+            <motion.div
+            initial="exit"
+              animate={isClick ? "enter" : "exit"}
+              variants={subMenuAnimate}>
                 <div>Investors</div>
                 <div>Features</div>
                 <div>Security</div>
-            </div>
+            </motion.div>
         </div>
     )
 }

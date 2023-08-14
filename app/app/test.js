@@ -7,12 +7,11 @@ export function Test(){
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
       target: ref,
-      offset: ["end end", "start start"]
+      offset: ["start end", "end end"]
     });
-    const rotation = `rotateX(${scrollYProgress}deg)`;
     return(
         <div ref={ref}>
-            <motion.div className='flex bg-white h-[25rem] rounded-md m-2 justify-end shadow-md' style={{ scale: scrollYProgress}}>
+            <motion.div className='flex bg-white h-[25rem] rounded-md m-2 justify-end shadow-md' style={{ scaleY: scrollYProgress }}>
                 <Image
                   src="/A.png"
                   alt="First Thing"

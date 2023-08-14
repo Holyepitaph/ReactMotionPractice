@@ -75,14 +75,21 @@ export function CardA(){
 export function CardB(){
     return(
         <div className='h-[27rem] border border-gray-200 m-4 p-4 flex flex-col justify-end bg-white rounded-lg shadow-lg'>
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className=" "
-              width={100}
-              height={24}
-              priority
-            />
+            <div className='h-24 border border-gray-200 bg-white rounded-lg shadow-lg w-48 text-sm flex flex-col justify-center'>
+                <div className='mx-2'>Custom Extraction</div>
+                <div className='bg-gray-200 w-1/2 text-[12px] rounded text-center px-0 mx-2 mb-2 mt-4'>has deductions</div>
+                <div className='bg-gray-200 w-1/2 text-[12px] rounded text-center px-0 mx-2'>has overtime</div>
+            </div>
+            <div>
+                <div>S</div>
+                <div>Webhook</div>
+                <div>Update user states to <span>approved</span></div>
+            </div>
+            <div>
+                <div>S</div>
+                <div>Manual Review</div>
+                <div>Send message in <span>#payroll-notifs</span></div>
+            </div>
             <div className='text-sm'>
                 <div className='font-medium mb-2'>Workflows that work the way you do</div>
                 <div>Create custom workflows that mirror your internal operations and let them run on autopilot -- no engineering resources required.</div>
