@@ -14,7 +14,7 @@ export function Menu(){
       transition: {
         duration: 1
       },
-      display: "block"
+      display: "flex"
     },
     exit: {
       opacity: 0,
@@ -29,7 +29,7 @@ export function Menu(){
     }
   };
     return(
-        <div className="rounded bg-white sticky top-4 bg-opacity-60 m-4 pl-4 pt-2 font-bold">
+        <div className="lg:w-[34.7rem] lg:mx-auto lg:h-14 lg:text-xl lg:pt-4 rounded-lg bg-white sticky top-4 bg-opacity-40 backdrop-blur-md  mx-4 sm:m-4 pl-4 pt-2 font-bold shadow-lg sm:mb-11 mb-16 z-10">
             <div className="flex gap-1  justify-start">
                 <div>S</div>
                 <div>Extend</div>
@@ -50,7 +50,9 @@ export function Menu(){
             <motion.div
             initial="exit"
               animate={isClick ? "enter" : "exit"}
-              variants={subMenuAnimate}>
+              variants={subMenuAnimate}
+              className="h-[6.5rem] lg:bg-white lg:rounded lg:w-[34.7rem] lg:-ml-4 lg:mt-2 lg:pl-4 lg:z-20 lg:bg-opacity-40 lg:backdrop-blur-md flex-col justify-evenly text-sm font-medium text-gray-500"
+              >
                 <div>Investors</div>
                 <div>Features</div>
                 <div>Security</div>
@@ -61,15 +63,15 @@ export function Menu(){
 
 export function Footer(){
     return(
-        <div className="h-64 bg-black text-white flex flex-col justify-end px-4">
+        <div className="sm:h-64 h-[18.5rem] bg-black text-white flex flex-col justify-end px-4">
             <div className="flex gap-2 font-bold">
                 <div>S</div>
                 <div>Extend</div>
             </div>
             <div className="text-[12px] mt-6">Intelligent data extraction and automation tools built for modern enterprises</div>
-            <div className="flex gap-2 text-sm mb-10 mt-16">
+            <div className="flex gap-2 text-sm sm:mb-10 mb-14 mt-16">
                 <a href="">Careers</a>
-                <div className="px-1 bg-gray-600 rounded-md text-[12px]">We're hiring!</div>
+                <div className="px-1 bg-gray-600 mb-4 rounded-md text-[12px]">We're hiring!</div>
                 <a href="">LinkedIn</a>
                 <a href="">Twitter</a>
             </div>

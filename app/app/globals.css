@@ -28,4 +28,9 @@ body {
 
 
 .test{
+  background: linear-gradient(270deg, rgba(38, 38, 38, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  /* background-color: blue; */
+  height: 2px;
+  width: 100px;
+  opacity: .7;
 }

@@ -11,8 +11,10 @@ export function ImageA(){
     offset: ["start end", "end end"]
   });
     return(
-        <div ref={ref}>
-          <motion.div className='flex bg-white h-[25rem] rounded-md m-2 justify-end shadow-md' style={{ scaleY: scrollYProgress }}>
+        <div ref={ref} className='mx-2'>
+          <motion.div className='flex bg-white h-64 lg:w-[50rem] lg:mx-20 xl:mx-[23.5rem] lg:mb-36 sm:h-[25rem] rounded-md m-2 justify-end shadow-md' 
+          // style={{ scaleY: scrollYProgress }}
+          >
               <Image
                 src="/A.png"
                 alt="First Thing"

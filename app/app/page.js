@@ -2,7 +2,7 @@
 
 
 import { motion } from 'framer-motion'
-import {Meteor, ScrollBar} from './animation.js'
+import {MeteorA, MeteorB, MeteorC, MeteorD, ScrollBar} from './animation.js'
 import {Menu, Footer} from './menu.js'
 import {ParA, ParB} from './text.js'
 import { ImageA } from '/app/images.js'
@@ -13,20 +13,24 @@ export default function Main() {
   return (
     <main className="">
  
-        <Meteor/>
+        <MeteorA/>
+        <MeteorB/>
+        <MeteorC/>
+        <MeteorD/> 
         <Menu/>
         <ParA/>
         <ImageA/>
         <ScrollBar/>
         <ParB/>
-        <CardA/>
-        <CardB/>
-        <CardC/>
-        <CardD/>
+        <div className='grid lg:grid-cols-2 md:gap-4'>
+          <CardA/>
+          <CardB/>
+          <CardC/>
+          <CardD/>
+        </div>
         <CardE/>
         <Footer/>
-
-
+        
     </main>
   )
 }
