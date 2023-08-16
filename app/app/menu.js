@@ -71,7 +71,7 @@ export function Footer(){
             <div className="text-[12px] mt-6">Intelligent data extraction and automation tools built for modern enterprises</div>
             <div className="flex gap-2 text-sm sm:mb-10 mb-14 mt-16">
                 <a href="">Careers</a>
-                <div className="px-1 bg-gray-600 mb-4 rounded-md text-[12px]">We're hiring!</div>
+                <div className="px-1 bg-gray-600 mb-4 rounded-md text-[12px]">We&apos;re hiring!</div>
                 <a href="">LinkedIn</a>
                 <a href="">Twitter</a>
             </div>
