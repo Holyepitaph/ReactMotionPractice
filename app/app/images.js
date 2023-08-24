@@ -5,15 +5,13 @@ import { motion, useScroll } from 'framer-motion'
 // Needs to have scroll animation 
 // Needs Images Replaced
 export function ImageA(){
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"]
-  });
+
     return(
-        <div ref={ref} className='mx-2'>
-          <motion.div className='flex bg-white h-64 lg:w-[50rem] lg:mx-20 xl:mx-[23.5rem] lg:mb-36 sm:h-[25rem] rounded-md m-2 justify-end shadow-md' 
-          // style={{ scaleY: scrollYProgress }}
+        <div  className='mx-2 xl:w-full'>
+          <motion.div initial={{rotateX:320}} whileInView={{rotateX:360}} 
+        viewport={{ amount: 0.8, margin: "500px 0px 0px 0px" }} transition={{type:"linear"}}
+          className='flex bg-white h-64 lg:w-[50rem] xl:w-5/6 lg:mx-20 xl:mx-12 lg:mb-36 sm:h-[25rem] 
+          rounded-md m-2 justify-end shadow-md' 
           >
               <Image
                 src="/A.png"
